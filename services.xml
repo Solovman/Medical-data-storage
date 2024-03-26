@@ -1,0 +1,19 @@
+<services>
+	<service name="catalogController">
+		<class name="N_ONE\App\Controller\CatalogController"/>
+	</service>
+
+	<service name="adminController">
+		<class name="N_ONE\App\Controller\AdminController"/>
+	</service>
+
+	<service name="migrator">
+		<class name="N_ONE\Core\Migrator\Migrator" isSingleton="1">
+			<arg service="dbConnector"/>
+		</class>
+	</service>
+
+	<service name="dbConnector">
+		<class name="N_ONE\Core\DbConnector\DbConnector" isSingleton="1"/>
+	</service>
+</services>

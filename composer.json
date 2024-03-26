@@ -1,0 +1,15 @@
+{
+    "autoload": {
+		"psr-4": {
+			"N_ONE\\App\\": "src/",
+			"N_ONE\\Core\\": "core/"
+		}
+    },
+    "authors": [
+        {
+            "name": "nascela",
+            "email": "serjono5522@gmail.com"
+        }
+    ],
+    "require": {}
+}

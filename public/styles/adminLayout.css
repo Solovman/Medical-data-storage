@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+main {
+
+	grid-column: 3;
+	grid-row: 2/4;
+	max-height: calc(100vh - 60px - 20px);
+	overflow-y: auto;
+	padding: 0;
+}
+
+header {
+	grid-column: 3;
+	left: 300px;
+}
+
+.container {
+	margin: 0 auto;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 10% 1fr 1%;
+	grid-template-columns: 10% 20% 1fr 10%;
+	overflow-y: auto;
+}
+
+.sidebar {
+	grid-row: 2 / -1;
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	position: sticky;
+	height: 100%;
+	z-index: 1;
+	top: 0;
+}
+
+.tags-container {
+	overflow-y: auto;
+	width: 100%;
+	/*margin: 0 auto;*/
+	margin-top: 70px;
+}
+
+.tags-container::-webkit-scrollbar {
+	display: none;
+}
+
+.tags {
+	list-style-type: none;
+	border: 2px solid #dcdcdc;
+	border-top: none;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.tags-title {
+	text-transform: uppercase;
+	padding: 20px 20px 20px 50px;
+	color: white;
+	background-color: #f45507;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+.tag-item {
+	padding: 15px 100px 15px 50px;
+}
+
+.tag-link {
+	text-decoration: none;
+	color: #000;
+}
+
+.tag-link:active,
+.tag-link:hover,
+.tag-link:visited {
+	color: #000;
+}
+
+
+#dashboard-logo {
+	aspect-ratio: 16/9;
+	grid-row: 1;
+	grid-column: 2;
+	max-height: 90%;
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#dashboard-logo img {
+	aspect-ratio: 16/9;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.dashboard-header {
+
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+	align-items: center;
+}
+
+.notification-card {
+	background-color: white;
+	width: 400px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	padding: 12px 12px 0 12px;
+}
+
+.notification-card-button {
+	display: block;
+	text-align: center;
+	margin-top: auto;
+	padding-bottom: 8px;
+}
+
+.admin-content {
+	padding: 40px;
+}
+
+.admin-table {
+	width: 100%;
+	border: 1px solid #dcdcdc;
+	margin-top: 70px;
+}
+
+.description-field {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 400px;
+}
+
+/* General table styling */
+.admin-table {
+	width: 100%; /* Full width of the container */
+	border-collapse: collapse; /* Collapse borders */
+	margin-bottom: 20px; /* Space below the table */
+}
+
+/* Table header row styling */
+.admin-table-header-row {
+	background-color: #f8f9fa; /* Light gray background */
+	color: #343a40; /* Dark text for contrast */
+	font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Table header cells styling */
+.admin-table th {
+	padding: 10px; /* Padding around cell content */
+	text-align: left; /* Left-aligned text */
+	border-bottom: 2px solid #dee2e6; /* Bottom border for separation */
+}
+
+/* Table content row styling */
+.admin-table-content-row {
+	background-color: #fff; /* White background */
+}
+
+/* Table content cells styling */
+.admin-table td {
+	padding: 10px; /* Padding around cell content */
+	text-align: left; /* Left-aligned text */
+}
+
+/* Specific field styling */
+.id-field,
+.title-field,
+.price-field,
+#description,
+.sort-order-field,
+td {
+	vertical-align: middle; /* Vertical alignment of content */
+}
+
+.actions-field {
+	display: flex;
+	/*justify-content: center;*/
+	gap: 12px;
+	text-align: left;
+}
+
+.actions-field img {
+	width: 25px;
+}
+
+/* Remove bottom border from the last row */
+.admin-table-content-row:last-child td {
+	border-bottom: none; /* No bottom border on the last row */
+}
+
+/* Optional: Highlight hovered rows */
+.admin-table-content-row:hover {
+	background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+/* Optional: Even row styling */
+.admin-table-content-row:nth-child(even) {
+	background-color: #e9ecef; /* Slightly darker gray for alternating rows */
+}
+
+/*.edit-form-container {*/
+/*	padding: 40px;*/
+
+/*}*/
+
+/*.edit-form {*/
+/*	display: flex;*/
+/*	width: 100%;*/
+/*	justify-content: space-between;*/
+
+/*}*/
+
+/*.form-section {*/
+/*	background-color: #f45507;*/
+/*	display: flex;*/
+/*	flex-direction: column;*/
+/*	gap: 18px;*/
+/*}*/
+/* Container for the edit form */
+.edit-form-container {
+	display: flex;
+	justify-content: space-between; /* Distribute space between sections */
+	align-items: flex-start; /* Align sections to the top */
+
+	gap: 20px; /* Space between the form sections */
+	padding: 20px; /* Padding around the form container */
+}
+
+
+/* Edit form styles */
+.edit-form {
+	/*display: flex;*/
+	/*flex-wrap: wrap; !* Allow form sections to wrap onto multiple lines if needed *!*/
+	width: 100%; /* Full width of the container */
+	gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+main::-webkit-scrollbar {
+	display: none;
+}
+
+.attribute-container {
+	grid-column: 1;
+}
+
+/* Form section styles */
+.form-section {
+	/*flex: 1; !* Grow and shrink equally *!*/
+	min-width: 45%; /* Minimum width for each section */
+	padding: 20px; /* Padding around each section */
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Input field styles */
+.form-section input[type="text"],
+.form-section input[type="password"],
+	/*.form-section input[type="checkbox"],*/
+.form-section textarea,
+.form-section select {
+	display: block;
+	width: 100%; /* Full width of the parent section */
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+{
+	display: block
+;
+}
+
+/* Radio button group styles */
+.tag-group {
+	margin-bottom: 10px; /* Space between radio button groups */
+}
+
+/* Radio button styles */
+.tag-group input[type="radio"] {
+	margin-right: 5px; /* Space between the radio button and its label */
+}
+
+.tag-group p {
+	margin-bottom: 8px; /* Space between the radio button and its label */
+}
+
+.form-section p {
+	margin-bottom: 8px;
+}
+
+label input[type="text"] {
+	margin-top: 8px;
+}
+
+/* Button styles (if you have buttons in your form) */
+.submit-button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px; /* Space above the button */
+}
+
+.submit-button:hover {
+	background-color: #0056b3;
+}
+
+#description {
+	resize: none;
+	height: 75px;
+}
+
+.confirm-delete-container {
+	display: flex;
+	justify-content: center;
+}
+
+
+.confirm-delete-form, .success-delete-container, .success-update-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.cancel-delete-link {
+	color: black;
+	text-decoration: none;
+}
+
+.cancel-delete-link:active {
+	color: black;
+	text-decoration: none;
+}
+
+/*.actions-field, #actions-column {*/
+/*	text-align: center;*/
+/*	width: 200px;*/
+/*}*/
+
+.add-entity-button {
+	position: fixed;
+	right: 10%;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 10px;
+	background-color: #ee753b;
+	text-decoration: none;
+	color: white;
+	width: 100px;
+	height: 40px;
+	margin-top: 12px;
+}
+
+.add-entity-button:hover {
+	color: white;
+}
+
+/*Стили для формы добавления картинок*/
+
+.add-images-section {
+	margin: 20px;
+}
+
+.image-form {
+	display: flex;
+	flex-direction: column;
+	margin: 200px 20px 20px 90px;
+	width: 60%;
+	align-items: center;
+}
+
+
+.submit-image-button {
+
+}
+
+/*Стили для формы удаления картинок*/
+
+.delete-images-section {
+	margin: 20px;
+	width: 90%;
+}
+
+.delete-images-section p {
+	margin-bottom: 12px;
+}
+
+.choose-file-button {
+	margin-bottom: 20px;
+}
+
+.image-grid {
+	/*width: 270px;*/
+	margin: 20px;
+	gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-between; !* Выравнивание элементов по ширине *!*/
+}
+
+.image-item {
+	width: 100px; /* Ширина элемента с учетом промежутков */
+	margin-bottom: 20px; /* Промежуток между элементами */
+	position: relative;
+}
+
+.image-item input[type="checkbox"] {
+	position: absolute;
+	opacity: 0; /* Делаем чекбокс невидимым */
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.image-item img {
+	width: 100%; /* Изображение занимает всю доступную ширину */
+	height: auto; /* Автоматическая высота */
+	border: 2px solid transparent; /* Пример рамки вокруг изображения */
+}
+
+.image-item input[type="checkbox"]:checked + img {
+	border-color: blue; /* Пример стиля рамки при выборе изображения */
+}
+
+.submit-delete-button {
+	margin-left: 20px;
+}
+
+/* что то от Леши */
+.checkbox-label {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 12px;
+}
+
+.attribute {
+	display: flex;
+	/*justify-content: center;*/
+	/*flex-direction: column;*/
+	align-items: center;
+}
+
+/*пагинация для items*/
+
+.pagination {
+	display: flex;
+	position: fixed;
+	right: 30%;
+	justify-content: space-evenly;
+	margin-bottom: 50px;
+	/*!* width: 100%;*/
+}
+
+.pagination a {
+	margin-right: 90px;
+	text-decoration: none;
+	font-size: 50px;
+	color: #383838;
+}
+
+.pagination a:hover {
+	text-decoration: none;
+	font-size: 53px;
+	color: #666;
+	transition: .3s;
+}
+
+.show-delete, .show-active {
+	position: fixed;
+	right: 10%;
+	display: block;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #ee753b;
+	text-decoration: none;
+	color: white;
+	width: 100px;
+	padding: 6px;
+}
